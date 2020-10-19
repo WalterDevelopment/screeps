@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "clean": "rimraf dist",
+        "copy": "node ./build/copy.js"
+    },
+    "devDependencies": {
+        "cpy": "^8.1.1",
+        "rimraf": "^3.0.2"
+    }
+}
