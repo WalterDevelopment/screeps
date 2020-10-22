@@ -14,7 +14,7 @@ or
 
 - ***`gh repo clone WalterDevelopment/screeps`***
 
-Next, tweak the ***[Config]*** to your liking. (***[Docs](####config)***)
+Next, tweak the ***[Config]*** to your liking. (***[Docs](#config)***)
 
 ### Docs
 
