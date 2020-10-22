@@ -105,3 +105,6 @@ dist
 
 # SECRETS!
 .screeps.json
+
+# VSCode generated files
+.VSCode
