@@ -1,5 +1,6 @@
 const fs = require('fs');
 const nodeDir = require('node-dir');
+const prettier = require('prettier');
 
 nodeDir.readFiles(
   './dist', // the root path
@@ -27,8 +28,18 @@ nodeDir.readFiles(
         fs.writeFile(filename, result, 'utf8', function (err) {
           if (err) return console.log(err);
         });
+        var result = prettier.format(data, {
+          parser: 'babel',
+          singleQuote: true,
+          tabWidth: 2,
+          useTabs: false,
+          arrowParens: 'avoid',
+          printWidth: 120,
+        });
+        fs.writeFile(filename, result, 'utf8', function (err) {
+          if (err) return console.log(err);
+        });
       });
-
       next();
     }
   }
