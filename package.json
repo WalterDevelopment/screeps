@@ -2,7 +2,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "copy": "node ./build/copy.js",
-    "prettierDeps": "node ./build/replaceImportsAndApplyPrettier.js"
+    "replaceDeps": "node ./build/replaceImports.js",
+    "prettierjs": "node ./build/prettier.js"
   },
   "devDependencies": {
     "cpy": "^8.1.1",

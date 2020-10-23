@@ -7,7 +7,7 @@ nodeDir.readFiles(
 
   // an options object
   {
-    match: /.js$/, // only match json files
+    match: /.js$/, // only match JavaScript files
     recursive: false, // only the root dir
   },
 
@@ -15,19 +15,8 @@ nodeDir.readFiles(
     if (err) {
       console.log(err);
     } else {
-      const regex = /(require\(')(.*)('\))/g;
-
-      function replacer(match, p1, p2, p3, offset, string) {
-        return p1 + p2.replace(/\.\//g, '').replace(/\//g, '_') + p3;
-      }
-
       fs.readFile(filename, 'utf8', function (err, data) {
         if (err) return console.log(err);
-
-        var result = data.replace(regex, replacer);
-        fs.writeFile(filename, result, 'utf8', function (err) {
-          if (err) return console.log(err);
-        });
         var result = prettier.format(data, {
           parser: 'babel',
           singleQuote: true,
@@ -40,7 +29,6 @@ nodeDir.readFiles(
           if (err) return console.log(err);
         });
       });
-      next();
     }
   }
 );
