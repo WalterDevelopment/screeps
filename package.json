@@ -2,13 +2,15 @@
   "scripts": {
     "clean": "rimraf dist",
     "copy": "node ./build/copy.js",
-    "replaceDeps": "node ./build/replaceImports.js"
+    "replaceDeps": "node ./build/replaceImports.js",
+    "prettierjs": "node ./build/prettier.js"
   },
   "devDependencies": {
     "cpy": "^8.1.1",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
-    "node-dir": "^0.1.17"
+    "node-dir": "^0.1.17",
+    "prettier": "^2.1.2"
   }
 }
