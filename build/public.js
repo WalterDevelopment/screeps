@@ -41,6 +41,8 @@ nodeDir.readFiles(
         modules[name] = base64_encode(filename);
       }
 
+      console.log(`${basename}, ${filename}, ${ext}, ${name}`);
+
       next();
     }
   },
@@ -51,6 +53,8 @@ nodeDir.readFiles(
         branch: screepsBranch,
         modules: modules,
       };
+
+    console.log(`branch: ${branch}`);
 
     var req = https.request({
       hostname: 'screeps.com',
