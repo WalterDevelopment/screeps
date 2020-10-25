@@ -3,6 +3,11 @@ var https = require('https');
 var nodeDir = require('node-dir');
 var path = require('path');
 var fs = require('fs');
+const { env } = require('process');
+
+const screepsEmail = env.email ? env.email : config.email;
+const screepsPassword = env.password ? env.password : config.password;
+const screepsBranch = env.branch ? env.branch : config.branch;
 
 let modules = {};
 
@@ -40,10 +45,10 @@ nodeDir.readFiles(
     }
   },
   function () {
-    var email = config.email,
-      password = config.password,
+    var email = screepsEmail,
+      password = screepsPassword,
       data = {
-        branch: config.branch,
+        branch: screepsBranch,
         modules: modules,
       };
 
