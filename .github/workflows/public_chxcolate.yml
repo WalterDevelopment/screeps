@@ -25,6 +25,6 @@ jobs:
     - run: npm ci
     - run: npm run public
       env:
-        email: ${{ secret.SCREEPS_EMAIL_CHXCOLATE }}
-        password: ${{ secret.SCREEPS_PASSWORD_CHXCOLATE }}
-        branch: ${{ secret.SCREEPS_BRANCH_CHXCOLATE }}
+        email: ${{ secrets.SCREEPS_EMAIL_CHXCOLATE }}
+        password: ${{ secrets.SCREEPS_PASSWORD_CHXCOLATE }}
+        branch: ${{ secrets.SCREEPS_BRANCH_CHXCOLATE }}
