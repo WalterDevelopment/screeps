@@ -40,8 +40,6 @@ nodeDir.readFiles(
     }
   },
   function () {
-    /* We now have our modules object, now we just need
-      to call the api and send it */
     var email = config.email,
       password = config.password,
       data = {
