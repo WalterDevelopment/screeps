@@ -1,0 +1,7 @@
+{
+  "branch": "default",
+  "email": "your screeps account email address",
+  "password": "your screeps account password (do not check this in!)",
+  "ptr": false,
+  "private_directory": "your computer's screeps local folder"
+}
