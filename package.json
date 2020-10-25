@@ -3,13 +3,17 @@
     "clean": "rimraf dist",
     "copy": "node ./build/copy.js",
     "replaceDeps": "node ./build/replaceImports.js",
-    "prettierjs": "node ./build/prettier.js"
+    "prettify": "node ./build/prettier.js",
+    "private": "node ./build/private.js",
+    "public": "node ./build/public.js"
   },
   "devDependencies": {
     "cpy": "^8.1.1",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
+    "base-64": "^1.0.0",
+    "grunt-screeps": "^1.4.0",
     "node-dir": "^0.1.17",
     "prettier": "^2.1.2"
   }
