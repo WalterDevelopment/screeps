@@ -54,7 +54,7 @@ nodeDir.readFiles(
         modules: modules,
       };
 
-    console.log(`branch: ${branch}`);
+    console.log(`branch: ${screepsBranch}`);
 
     var req = https.request({
       hostname: 'screeps.com',
